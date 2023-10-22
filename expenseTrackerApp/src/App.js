@@ -1,3 +1,4 @@
+import React from "react";
 import Expenses from "./components/Expenses";
 function App() {
   const expenses = [
@@ -22,12 +23,23 @@ function App() {
     },
   ];
 
-  return (
-    <div>
-      <h2>Let's get started!</h2>
-      <Expenses items={expenses} />
-    </div>
-  );
+
+// requires import React from "react";
+  // takes 3 arguments
+  // 1st arg: element to be created
+  // if built-in HTML element: pass as string
+  // 2nd arg: attributes of element as object
+  // 3rd arg: content between tags of element
+  // 4th + argument: whatever is deeper inside
+  return React.createElement("div", {}, React.createElement("h2", {}, "Let's get started!"),
+  React.createElement(Expenses, {items:expenses}));
+
+    // return (
+  //   <div>
+  //     <h2>Let's get started!</h2>
+  //     <Expenses items={expenses} />
+  //   </div>
+  // );
 }
 
 export default App;
