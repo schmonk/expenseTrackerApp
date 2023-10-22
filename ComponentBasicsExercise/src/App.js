@@ -35,14 +35,9 @@ function App() {
         <p>Selected key React concepts you should know about</p>
       </header>
       <ul id="concepts">
-        {/* <li className="concept">
-          <img src={componentsImage} alt={concepts[0].title} />
-          <h2>{concepts[0].title}</h2>
-          <p>{concepts[0].description}</p>
-        </li> */}
-        <Concept concepts={concepts[0]} imageSource={componentsImage} />
-        <Concept concepts={concepts[1]} imageSource={stateImage} />
-        <Concept concepts={concepts[2]} imageSource={eventsImage} />
+        <Concept concepts={concepts[0]} />
+        <Concept concepts={concepts[1]} />
+        <Concept concepts={concepts[2]} />
       </ul>
     </div>
   );
