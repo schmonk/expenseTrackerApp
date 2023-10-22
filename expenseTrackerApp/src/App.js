@@ -1,5 +1,7 @@
 import React from "react";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
+
 const App = () => {
   const expenses = [
     {
@@ -23,8 +25,7 @@ const App = () => {
     },
   ];
 
-
-// requires import React from "react";
+  // requires import React from "react";
   // takes 3 arguments
   // 1st arg: element to be created
   // if built-in HTML element: pass as string
@@ -34,12 +35,12 @@ const App = () => {
   // return React.createElement("div", {}, React.createElement("h2", {}, "Let's get started!"),
   // React.createElement(Expenses, {items:expenses}));
 
-    return (
+  return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;
