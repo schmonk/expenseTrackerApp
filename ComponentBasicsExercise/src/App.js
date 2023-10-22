@@ -40,9 +40,9 @@ function App() {
           <h2>{concepts[0].title}</h2>
           <p>{concepts[0].description}</p>
         </li> */}
-        <Concept concepts={concepts[0]} imageSource={componentsImage} className="concept" />
-        <Concept concepts={concepts[1]} imageSource={stateImage} className="concept" />
-        <Concept concepts={concepts[2]} imageSource={eventsImage} className="concept" />
+        <Concept concepts={concepts[0]} imageSource={componentsImage} />
+        <Concept concepts={concepts[1]} imageSource={stateImage} />
+        <Concept concepts={concepts[2]} imageSource={eventsImage} />
       </ul>
     </div>
   );
