@@ -14,14 +14,26 @@ const App = () => {
     {
       id: "e3",
       title: "Groceries",
+      amount: 32.65,
+      date: new Date(2022, 9, 12),
+    },
+    {
+      id: "e3",
+      title: "Groceries",
       amount: 45.65,
-      date: new Date(2023, 9, 21),
+      date: new Date(2021, 9, 21),
     },
     {
       id: "e4",
       title: "IKEA furniture",
       amount: 302,
-      date: new Date(2023, 9, 18),
+      date: new Date(2020, 9, 18),
+    },
+    {
+      id: "e5",
+      title: "Black hole",
+      amount: 666,
+      date: new Date(2019, 1, 1),
     },
   ];
   const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
