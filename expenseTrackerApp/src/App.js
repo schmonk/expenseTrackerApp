@@ -18,12 +18,6 @@ const App = () => {
       date: new Date(2022, 9, 12),
     },
     {
-      id: "e3",
-      title: "Groceries",
-      amount: 45.65,
-      date: new Date(2021, 9, 21),
-    },
-    {
       id: "e4",
       title: "IKEA furniture",
       amount: 302,
