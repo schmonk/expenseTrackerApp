@@ -1,8 +1,32 @@
+import NewProject from "./components/NewProject";
+import { useState } from "react";
+import NoProjectSelected from "./components/NoProjectSelected";
+import ProjectsSidebar from "./components/ProjectsSidebar";
+
 function App() {
+  const [projectsState, setProjectsState] = useState({
+    selectedProjectId: undefined,
+    projects: [],
+  });
+  function handleStartAddProject() {
+    setProjectsState((previousState) => {
+      return {
+        ...previousState,
+        selectedProjectId: null,
+      };
+    });
+  }
+  let content;
+  if (projectsState.selectedProjectId === null) {
+    content = <NewProject />;
+  } else if (projectsState.selectedProjectId === undefined) {
+    content = <NoProjectSelected onStartAddProject={handleStartAddProject} />;
+  }
   return (
-    <>
-      <h1 className="my-8 text-center text-5xl font-bold">Hello World</h1>
-    </>
+    <main className="h-screen my-8 flex gap-8">
+      <ProjectsSidebar onStartAddProject={handleStartAddProject} />
+      {content}
+    </main>
   );
 }
 
